@@ -42,7 +42,7 @@ export type CaseStudy = {
   roleDetail: string[];
   impact: { intro: string; points: string[] };
   impactStats: Stat[];
-  gallery: { caption: string }[];
+  gallery: { caption: string; image?: string }[];
   behindClosedDoors: { heading: string; paragraphs: string[]; actions?: string[] };
   quote?: { text: string; attribution: string };
   learning: string[];
@@ -87,7 +87,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Products support with design system", value: "4" },
     ],
     gallery: [
-      { caption: "Project #1 — Multi-State Selection & Calculation Platform" },
+      { caption: "Project #1 — Multi-State Selection & Calculation Platform", image: "/images/case-studies/gallery/gaming-1.jpg" },
       { caption: "Project #2 — Transaction History & Tracking" },
     ],
     behindClosedDoors: {
@@ -135,12 +135,12 @@ export const caseStudies: CaseStudy[] = [
       { label: "Strategic design principles per brand defined", value: "5" },
     ],
     gallery: [
-      { caption: "Collaborative workshopping." },
-      { caption: "Design principles for each brand." },
-      { caption: "Future scenarios for each of the brands to highlight key hero moments." },
-      { caption: "Key job-to-be-done." },
-      { caption: "High-level strategy to transform patient experience." },
-      { caption: "Snippets of concept prototypes." },
+      { caption: "Collaborative workshopping.", image: "/images/case-studies/gallery/brands-1.jpg" },
+      { caption: "Design principles for each brand.", image: "/images/case-studies/gallery/brands-2.jpg" },
+      { caption: "Future scenarios for each of the brands to highlight key hero moments.", image: "/images/case-studies/gallery/brands-3.jpg" },
+      { caption: "Key job-to-be-done.", image: "/images/case-studies/gallery/brands-4.jpg" },
+      { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/brands-5.jpg" },
+      { caption: "Snippets of concept prototypes.", image: "/images/case-studies/gallery/brands-6.jpg" },
     ],
     behindClosedDoors: {
       heading: "Behind Closed Doors: Leading Through Business Crisis",
@@ -184,13 +184,13 @@ export const caseStudies: CaseStudy[] = [
       { label: "Reduction in call drop rate, improving care accessibility", value: "20%" },
     ],
     gallery: [
-      { caption: "A patient's personal calendar to keep track of her various appointments." },
-      { caption: "A patient zooming in on the medication details to get a clearer view." },
-      { caption: "Snapshot of challenges." },
-      { caption: "Ethnographic research summary." },
-      { caption: "Exemplars from various ecosystems." },
-      { caption: "High-level strategy to transform patient experience." },
-      { caption: "A series of concepts showcase." },
+      { caption: "A patient's personal calendar to keep track of her various appointments.", image: "/images/case-studies/gallery/healthcare-1.jpg" },
+      { caption: "A patient zooming in on the medication details to get a clearer view.", image: "/images/case-studies/gallery/healthcare-2.jpg" },
+      { caption: "Snapshot of challenges.", image: "/images/case-studies/gallery/healthcare-3.jpg" },
+      { caption: "Ethnographic research summary.", image: "/images/case-studies/gallery/healthcare-4.jpg" },
+      { caption: "Exemplars from various ecosystems.", image: "/images/case-studies/gallery/healthcare-5.jpg" },
+      { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/healthcare-6.jpg" },
+      { caption: "A series of concepts showcase.", image: "/images/case-studies/gallery/healthcare-7.jpg" },
     ],
     behindClosedDoors: {
       heading: "Behind Closed Doors: Introducing Human-Centred Design to Healthcare",
@@ -244,10 +244,10 @@ export const caseStudies: CaseStudy[] = [
       { label: "Annual revenue uplift", value: "USD 20K" },
     ],
     gallery: [
-      { caption: "As-is AndroidTV user journey." },
-      { caption: "One of the opportunity areas." },
-      { caption: "Example of a Northstar design direction." },
-      { caption: "Final implementation." },
+      { caption: "As-is AndroidTV user journey.", image: "/images/case-studies/gallery/androidtv-1.jpg" },
+      { caption: "One of the opportunity areas.", image: "/images/case-studies/gallery/androidtv-2.jpg" },
+      { caption: "Example of a Northstar design direction.", image: "/images/case-studies/gallery/androidtv-3.jpg" },
+      { caption: "Final implementation.", image: "/images/case-studies/gallery/androidtv-4.jpg" },
     ],
     behindClosedDoors: {
       heading: "Behind Closed Doors: Navigating Constraints & Driving Change",
@@ -305,12 +305,12 @@ export const caseStudies: CaseStudy[] = [
       { label: "Platforms unified under a scalable design language", value: "4" },
     ],
     gallery: [
-      { caption: "Component snapshot." },
-      { caption: "Flow-first approach." },
-      { caption: "Embedded states in components." },
-      { caption: "Embedded complex animation in component." },
-      { caption: "Detailed documentation." },
-      { caption: "Colour theming." },
+      { caption: "Component snapshot.", image: "/images/case-studies/gallery/system-1.jpg" },
+      { caption: "Flow-first approach.", image: "/images/case-studies/gallery/system-2.jpg" },
+      { caption: "Embedded states in components.", image: "/images/case-studies/gallery/system-3.jpg" },
+      { caption: "Embedded complex animation in component.", image: "/images/case-studies/gallery/system-4.jpg" },
+      { caption: "Detailed documentation.", image: "/images/case-studies/gallery/system-5.jpg" },
+      { caption: "Colour theming.", image: "/images/case-studies/gallery/system-6.jpg" },
     ],
     behindClosedDoors: {
       heading: "Behind Closed Doors: Leading Through Uncharted Territory",
@@ -358,10 +358,10 @@ export const caseStudies: CaseStudy[] = [
       { label: "Platform guidelines compliance", value: "100%" },
     ],
     gallery: [
-      { caption: "Before — Multi windows layout." },
-      { caption: "After — Single window layout." },
-      { caption: "Desktop application benchmarking." },
-      { caption: "Prototype demo." },
+      { caption: "Before — Multi windows layout.", image: "/images/case-studies/gallery/desktop-1.jpg" },
+      { caption: "After — Single window layout.", image: "/images/case-studies/gallery/desktop-2.jpg" },
+      { caption: "Desktop application benchmarking.", image: "/images/case-studies/gallery/desktop-3.jpg" },
+      { caption: "Prototype demo.", image: "/images/case-studies/gallery/desktop-4.jpg" },
       { caption: "Specification document of the new layout." },
     ],
     behindClosedDoors: {

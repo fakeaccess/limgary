@@ -93,7 +93,7 @@ export function CaseStudy() {
           <div className="my-16 grid gap-6 sm:grid-cols-2">
             {study.gallery.map((g, i) => (
               <figure key={i}>
-                <CardArt art={study.cardArt} />
+                <CardArt art={study.cardArt} image={g.image} alt={g.caption} />
                 <figcaption className="mt-3 text-sm text-muted-foreground">
                   {g.caption}
                 </figcaption>
