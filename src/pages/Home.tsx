@@ -66,7 +66,7 @@ export function Home() {
                       </span>
                     )}
                   </div>
-                  <span className="text-muted-foreground sm:text-left">{e.role}</span>
+                  <span className="text-muted-foreground sm:text-center">{e.role}</span>
                   <span className="text-sm text-muted-foreground sm:text-right">{e.year}</span>
                 </div>
               </RevealOnScroll>
