@@ -57,7 +57,7 @@ export function Home() {
           <div className="mt-12 divide-y divide-white/5">
             {experience.map((e) => (
               <RevealOnScroll key={e.company}>
-                <div className="flex flex-col gap-2 py-6 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-col gap-2 py-6 sm:grid sm:grid-cols-[280px_1fr_96px] sm:items-center sm:gap-6">
                   <div className="flex items-center gap-3">
                     <span className="text-lg font-medium">{e.company}</span>
                     {e.tag && (
@@ -66,8 +66,8 @@ export function Home() {
                       </span>
                     )}
                   </div>
-                  <span className="text-muted-foreground">{e.role}</span>
-                  <span className="text-sm text-muted-foreground">{e.year}</span>
+                  <span className="text-muted-foreground sm:text-left">{e.role}</span>
+                  <span className="text-sm text-muted-foreground sm:text-right">{e.year}</span>
                 </div>
               </RevealOnScroll>
             ))}
