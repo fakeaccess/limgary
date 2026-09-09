@@ -3,7 +3,7 @@ export const siteMeta = {
   role: "Product Design Leader",
   email: "garylim.design@gmail.com",
   linkedin: "https://www.linkedin.com/in/gary-lim",
-  resume: "https://drive.google.com/file/d/1tINN8cgJbRV2DF22yOtD2tRWQjn0XflC/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1rcMPjr3sQrJHoeq8jdJ04E5HLWlidWi9/view?usp=sharing",
   moreProjects: "https://garylim.notion.site/I-m-Gary-4833850ba1044c03baeecd44f6008cbe?source=copy_link",
 };
 
@@ -12,7 +12,7 @@ export const heroAvatar = "/images/hero-avatar.png";
 export const logos = [
   { name: "IBM", blurb: "Technology and consulting for global businesses.", logo: "/images/logos/ibm.svg" },
   { name: "Boston Consulting Group", blurb: "One of the world's top three strategy consulting firms.", logo: "/images/logos/bcg.svg" },
-  { name: "KONE", blurb: "Global leader in elevators and escalators.", logo: "/images/logos/kone.svg" },
+  { name: "KONE", blurb: "Global leader in elevators and escalators.", logo: "/images/logos/kone.png", logoIsWhite: true },
   { name: "ExpressVPN", blurb: "A top-tier consumer virtual private network.", logo: "/images/logos/expressvpn.svg" },
   { name: "Nanyang Polytechnic", blurb: "A leading institution for design education in Singapore.", logo: "/images/logos/nyp.svg" },
   { name: "Chaos Theory", blurb: "A venture studio building digital products.", logo: "/images/logos/chaos-theory.svg" },

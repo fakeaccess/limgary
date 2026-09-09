@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { logos } from "@/lib/data";
 
 export function LogoMarquee() {
@@ -10,7 +11,10 @@ export function LogoMarquee() {
             <img
               src={logo.logo}
               alt={logo.name}
-              className="h-7 w-auto max-w-[10rem] object-contain opacity-60 brightness-0 invert transition-opacity duration-200 hover:opacity-100"
+              className={cn(
+                "h-7 w-auto max-w-[10rem] object-contain opacity-60 transition-opacity duration-200 hover:opacity-100",
+                !logo.logoIsWhite && "brightness-0 invert"
+              )}
             />
             <span className="text-xs text-muted-foreground">{logo.blurb}</span>
           </div>
