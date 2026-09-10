@@ -22,7 +22,7 @@ export function Home() {
             loading="eager"
           />
           <h1 className="mt-8 text-balance text-4xl font-semibold tracking-tight sm:text-6xl">
-            Complexity to Clarity
+            Chaos to Clarity
           </h1>
           <p className="mt-6 max-w-xl text-balance text-muted-foreground sm:text-lg">
             Gary is a product design leader who bridges the gap between strategic vision and
@@ -66,7 +66,7 @@ export function Home() {
                       </span>
                     )}
                   </div>
-                  <span className="text-muted-foreground sm:text-center">{e.role}</span>
+                  <span className="text-muted-foreground sm:text-left">{e.role}</span>
                   <span className="text-sm text-muted-foreground sm:text-right">{e.year}</span>
                 </div>
               </RevealOnScroll>
@@ -78,7 +78,7 @@ export function Home() {
       <section className="border-t border-white/5">
         <div className="container py-24 text-center sm:py-32">
           <RevealOnScroll>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">More Projects</h2>
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">More projects</h2>
             <p className="mx-auto mt-4 max-w-md text-muted-foreground">
               Additional works include projects across banking, telecommunications, and consumer
               products, demonstrating range across industries and problem types.
