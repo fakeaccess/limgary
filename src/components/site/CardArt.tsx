@@ -37,6 +37,7 @@ export function CardArt({
   alt,
   className,
   crop,
+  frame = "dark",
 }: {
   art: CardArtType;
   image?: string;
@@ -48,6 +49,8 @@ export function CardArt({
   className?: string;
   /** Constrain the image to a 16:9 box (cropped via object-cover) instead of showing it at its natural size. */
   crop?: boolean;
+  /** Container treatment: "dark" card (default), "white" card with padding for light-canvas artwork, or "none" for no border/background — the image blends straight into the page. */
+  frame?: "dark" | "white" | "none";
 }) {
   const p = palettes[art];
   const id = `card-art-${art}`;
@@ -78,10 +81,22 @@ export function CardArt({
   }
 
   if (image) {
+    if (frame === "none") {
+      return (
+        <img
+          src={image}
+          alt={alt ?? ""}
+          className={cn("block w-full", crop && "aspect-[16/9] object-cover", className)}
+          loading="lazy"
+        />
+      );
+    }
+
     return (
       <div
         className={cn(
-          "relative w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0c]",
+          "relative w-full overflow-hidden rounded-2xl border",
+          frame === "white" ? "border-black/5 bg-white p-6 sm:p-10" : "border-white/10 bg-[#0c0c0c]",
           crop && "aspect-[16/9]",
           className
         )}

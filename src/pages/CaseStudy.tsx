@@ -129,8 +129,8 @@ export function CaseStudy() {
           ) : (
             <div className="my-16 flex flex-col gap-10">
               {study.gallery.map((g, i) => (
-                <figure key={i}>
-                  <CardArt art={study.cardArt} image={g.image} alt={g.caption} />
+                <figure key={i} className={g.narrow ? "mx-auto max-w-sm" : undefined}>
+                  <CardArt art={study.cardArt} image={g.image} alt={g.caption} frame={g.frame} />
                   <figcaption className="mt-3 text-sm text-muted-foreground">
                     {g.caption}
                   </figcaption>

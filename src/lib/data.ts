@@ -49,6 +49,10 @@ export type CaseStudy = {
     videoWebm?: string;
     heading?: string;
     description?: string;
+    /** Container treatment for the image/video — "dark" (default) card, "white" card with padding for light-canvas artwork, or "none" for no border/background (image blends into the page). */
+    frame?: "dark" | "white" | "none";
+    /** Render at a capped, centered phone-screenshot width instead of stretching full-bleed — for a single portrait screenshot rather than a wide multi-panel graphic. */
+    narrow?: boolean;
   }[];
   behindClosedDoors: { heading: string; paragraphs: string[]; actions?: string[] };
   quote?: { text: string; attribution: string };
@@ -158,11 +162,10 @@ export const caseStudies: CaseStudy[] = [
     gallery: [
       { caption: "Collaborative workshopping." },
       { caption: "Design principles for each brand.", image: "/images/case-studies/gallery/brands-1.jpg" },
-      { caption: "Future scenarios for each of the brands to highlight key hero moments.", image: "/images/case-studies/gallery/brands-2.jpg" },
-      { caption: "Key job-to-be-done.", image: "/images/case-studies/gallery/brands-3.jpg" },
-      { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/brands-4.jpg" },
-      { caption: "Snippets of concept prototypes.", image: "/images/case-studies/gallery/brands-5.jpg" },
-      { caption: "Snippets of concept prototypes.", image: "/images/case-studies/gallery/brands-6.jpg" },
+      { caption: "Future scenarios for each of the brands to highlight key hero moments.", image: "/images/case-studies/gallery/brands-2.jpg", frame: "none" },
+      { caption: "Key job-to-be-done.", image: "/images/case-studies/gallery/brands-3.jpg", frame: "none" },
+      { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/brands-5.jpg", frame: "white" },
+      { caption: "Snippets of concept prototypes.", image: "/images/case-studies/gallery/brands-6.jpg", frame: "none", narrow: true },
     ],
     behindClosedDoors: {
       heading: "Behind Closed Doors: Leading Through Business Crisis",
