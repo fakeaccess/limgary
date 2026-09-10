@@ -128,14 +128,33 @@ export function CaseStudy() {
             </div>
           ) : (
             <div className="my-16 flex flex-col gap-10">
-              {study.gallery.map((g, i) => (
-                <figure key={i} className={g.narrow ? "mx-auto max-w-sm" : undefined}>
-                  <CardArt art={study.cardArt} image={g.image} alt={g.caption} frame={g.frame} />
-                  <figcaption className="mt-3 text-sm text-muted-foreground">
-                    {g.caption}
-                  </figcaption>
-                </figure>
-              ))}
+              {study.gallery.map((g, i) =>
+                g.row ? (
+                  <figure key={i}>
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                      {g.row.map((item, j) => (
+                        <img
+                          key={j}
+                          src={item.src}
+                          alt={item.alt ?? g.caption}
+                          className="block w-full rounded-2xl"
+                          loading="lazy"
+                        />
+                      ))}
+                    </div>
+                    <figcaption className="mt-3 text-sm text-muted-foreground">
+                      {g.caption}
+                    </figcaption>
+                  </figure>
+                ) : (
+                  <figure key={i} className={g.narrow ? "mx-auto max-w-sm" : undefined}>
+                    <CardArt art={study.cardArt} image={g.image} alt={g.caption} frame={g.frame} />
+                    <figcaption className="mt-3 text-sm text-muted-foreground">
+                      {g.caption}
+                    </figcaption>
+                  </figure>
+                )
+              )}
             </div>
           )}
         </RevealOnScroll>

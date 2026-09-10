@@ -53,6 +53,8 @@ export type CaseStudy = {
     frame?: "dark" | "white" | "none";
     /** Render at a capped, centered phone-screenshot width instead of stretching full-bleed — for a single portrait screenshot rather than a wide multi-panel graphic. */
     narrow?: boolean;
+    /** A set of looping GIFs/images shown together — 3-across on desktop, stacked on mobile. Overrides image/video when present. */
+    row?: { src: string; alt?: string }[];
   }[];
   behindClosedDoors: { heading: string; paragraphs: string[]; actions?: string[] };
   quote?: { text: string; attribution: string };
@@ -163,9 +165,16 @@ export const caseStudies: CaseStudy[] = [
       { caption: "Collaborative workshopping.", image: "/images/case-studies/gallery/brands-0.jpg", frame: "none" },
       { caption: "Design principles for each brand.", image: "/images/case-studies/gallery/brands-1.jpg" },
       { caption: "Future scenarios for each of the brands to highlight key hero moments.", image: "/images/case-studies/gallery/brands-2.jpg", frame: "none" },
-      { caption: "Key job-to-be-done.", image: "/images/case-studies/gallery/brands-3.jpg", frame: "none" },
-      { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/brands-5.jpg", frame: "white" },
-      { caption: "Snippets of concept prototypes.", image: "/images/case-studies/gallery/brands-6.jpg", frame: "none", narrow: true },
+      { caption: "Key job-to-be-done.", image: "/images/case-studies/gallery/brands-3.png", frame: "none" },
+      { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/brands-5.png", frame: "white" },
+      {
+        caption: "Snippets of concept prototypes.",
+        row: [
+          { src: "/images/case-studies/gallery/brands-snippet-1.gif", alt: "Open suspicious link in a safe environment" },
+          { src: "/images/case-studies/gallery/brands-snippet-2.gif", alt: "Optimise bandwidth for favourite or critical apps" },
+          { src: "/images/case-studies/gallery/brands-snippet-3.gif", alt: "Parallel connections to different locations" },
+        ],
+      },
     ],
     behindClosedDoors: {
       heading: "Behind Closed Doors: Leading Through Business Crisis",
