@@ -39,6 +39,7 @@ export function CaseStudyCard({ study, reverse }: { study: CaseStudy; reverse?: 
           art={study.cardArt}
           image={study.image}
           alt={study.title}
+          crop
           className="transition-transform duration-500 group-hover:scale-[1.02]"
         />
       </Link>

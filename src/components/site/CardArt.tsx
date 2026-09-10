@@ -24,11 +24,14 @@ export function CardArt({
   image,
   alt,
   className,
+  crop,
 }: {
   art: CardArtType;
   image?: string;
   alt?: string;
   className?: string;
+  /** Constrain the image to a 16:9 box (cropped via object-cover) instead of showing it at its natural size. */
+  crop?: boolean;
 }) {
   const p = palettes[art];
   const id = `card-art-${art}`;
@@ -38,10 +41,16 @@ export function CardArt({
       <div
         className={cn(
           "relative w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0c]",
+          crop && "aspect-[16/9]",
           className
         )}
       >
-        <img src={image} alt={alt ?? ""} className="block h-auto w-full" loading="lazy" />
+        <img
+          src={image}
+          alt={alt ?? ""}
+          className={cn("block w-full", crop ? "h-full object-cover" : "h-auto")}
+          loading="lazy"
+        />
       </div>
     );
   }
