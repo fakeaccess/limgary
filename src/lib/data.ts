@@ -156,11 +156,12 @@ export const caseStudies: CaseStudy[] = [
       { label: "Strategic design principles per brand defined", value: "5" },
     ],
     gallery: [
-      { caption: "Collaborative workshopping.", image: "/images/case-studies/gallery/brands-1.jpg" },
-      { caption: "Design principles for each brand.", image: "/images/case-studies/gallery/brands-2.jpg" },
-      { caption: "Future scenarios for each of the brands to highlight key hero moments.", image: "/images/case-studies/gallery/brands-3.jpg" },
-      { caption: "Key job-to-be-done.", image: "/images/case-studies/gallery/brands-4.jpg" },
-      { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/brands-5.jpg" },
+      { caption: "Collaborative workshopping." },
+      { caption: "Design principles for each brand.", image: "/images/case-studies/gallery/brands-1.jpg" },
+      { caption: "Future scenarios for each of the brands to highlight key hero moments.", image: "/images/case-studies/gallery/brands-2.jpg" },
+      { caption: "Key job-to-be-done.", image: "/images/case-studies/gallery/brands-3.jpg" },
+      { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/brands-4.jpg" },
+      { caption: "Snippets of concept prototypes.", image: "/images/case-studies/gallery/brands-5.jpg" },
       { caption: "Snippets of concept prototypes.", image: "/images/case-studies/gallery/brands-6.jpg" },
     ],
     behindClosedDoors: {
