@@ -42,7 +42,7 @@ export function About() {
             <ul className="mt-6 space-y-4">
               {aboutContent.highlights.map((h) => (
                 <li key={h} className="flex gap-3 text-sm">
-                  <span className="mt-1 size-1.5 shrink-0 rounded-full bg-foreground" />
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-foreground" />
                   <span>{h}</span>
                 </li>
               ))}
