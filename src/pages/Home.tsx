@@ -41,17 +41,24 @@ export function Home() {
 
       <section id="work" className="container scroll-mt-20 py-24 sm:py-32">
         <div className="flex flex-col gap-10">
-          {caseStudies.map((study, i) => (
-            <div
-              key={study.slug}
-              className="rounded-3xl md:sticky md:bg-background"
-              style={{ top: `${88 + i * 16}px`, zIndex: i + 1 }}
-            >
-              <RevealOnScroll>
-                <CaseStudyCard study={study} reverse={i % 2 === 1} />
-              </RevealOnScroll>
-            </div>
-          ))}
+          {caseStudies.map((study, i) => {
+            const stackWidth = 100 - (caseStudies.length - 1 - i) * 2.5;
+            return (
+              <div
+                key={study.slug}
+                className="mx-auto w-full rounded-3xl md:sticky md:w-[var(--stack-w)] md:bg-background"
+                style={{
+                  top: `${88 + i * 16}px`,
+                  zIndex: i + 1,
+                  ["--stack-w" as string]: `${stackWidth}%`,
+                }}
+              >
+                <RevealOnScroll>
+                  <CaseStudyCard study={study} reverse={i % 2 === 1} />
+                </RevealOnScroll>
+              </div>
+            );
+          })}
         </div>
       </section>
 
