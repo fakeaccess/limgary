@@ -32,12 +32,18 @@ const marks: Record<CardArtType, string> = {
 export function CardArt({
   art,
   image,
+  video,
+  videoWebm,
   alt,
   className,
   crop,
 }: {
   art: CardArtType;
   image?: string;
+  /** Looping video (mp4/h264) shown instead of a static image — e.g. an export of an interactive prototype. */
+  video?: string;
+  /** Optional webm/vp9 source, offered before the mp4 fallback for smaller size and broader headless/Linux support. */
+  videoWebm?: string;
   alt?: string;
   className?: string;
   /** Constrain the image to a 16:9 box (cropped via object-cover) instead of showing it at its natural size. */
@@ -45,6 +51,31 @@ export function CardArt({
 }) {
   const p = palettes[art];
   const id = `card-art-${art}`;
+
+  if (video) {
+    return (
+      <div
+        className={cn(
+          "relative w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0c]",
+          crop && "aspect-[16/9]",
+          className
+        )}
+      >
+        <video
+          poster={image}
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-label={alt}
+          className={cn("block w-full", crop ? "h-full object-cover" : "h-auto")}
+        >
+          {videoWebm && <source src={videoWebm} type="video/webm" />}
+          <source src={video} type="video/mp4" />
+        </video>
+      </div>
+    );
+  }
 
   if (image) {
     return (

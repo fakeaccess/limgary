@@ -42,7 +42,14 @@ export type CaseStudy = {
   roleDetail: string[];
   impact: { intro: string; points: string[] };
   impactStats: Stat[];
-  gallery: { caption: string; image?: string; heading?: string; description?: string }[];
+  gallery: {
+    caption: string;
+    image?: string;
+    video?: string;
+    videoWebm?: string;
+    heading?: string;
+    description?: string;
+  }[];
   behindClosedDoors: { heading: string; paragraphs: string[]; actions?: string[] };
   quote?: { text: string; attribution: string };
   learning: string[];
@@ -93,6 +100,8 @@ export const caseStudies: CaseStudy[] = [
         description:
           "Led design for sophisticated selection and calculation platform managing complex user choices with real-time data integration and immediate financial impact. Developed systematic approach to multi-state flows (15+ possible states), real-time data updates, and robust error handling across transaction scenarios. Created cross-platform design patterns optimised for mobile, tablet, and desktop environments.",
         image: "/images/case-studies/gallery/gaming-2.jpg",
+        video: "/images/case-studies/gallery/gaming-1-cart.mp4",
+        videoWebm: "/images/case-studies/gallery/gaming-1-cart.webm",
       },
       {
         caption: "Project #2 — Transaction History & Tracking",

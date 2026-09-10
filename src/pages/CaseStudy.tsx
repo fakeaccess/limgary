@@ -105,7 +105,13 @@ export function CaseStudy() {
                   key={i}
                   className="grid gap-6 sm:grid-cols-[minmax(0,260px)_1fr] sm:items-start sm:gap-10"
                 >
-                  <CardArt art={study.cardArt} image={g.image} alt={g.heading ?? g.caption} />
+                  <CardArt
+                    art={study.cardArt}
+                    image={g.image}
+                    video={g.video}
+                    videoWebm={g.videoWebm}
+                    alt={g.heading ?? g.caption}
+                  />
                   <div>
                     <span className="inline-flex w-fit rounded-full border border-white/15 px-2.5 py-0.5 text-xs text-muted-foreground">
                       Project #{i + 1}
