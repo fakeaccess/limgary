@@ -160,7 +160,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Strategic design principles per brand defined", value: "5" },
     ],
     gallery: [
-      { caption: "Collaborative workshopping." },
+      { caption: "Collaborative workshopping.", image: "/images/case-studies/gallery/brands-0.jpg", frame: "none" },
       { caption: "Design principles for each brand.", image: "/images/case-studies/gallery/brands-1.jpg" },
       { caption: "Future scenarios for each of the brands to highlight key hero moments.", image: "/images/case-studies/gallery/brands-2.jpg", frame: "none" },
       { caption: "Key job-to-be-done.", image: "/images/case-studies/gallery/brands-3.jpg", frame: "none" },
