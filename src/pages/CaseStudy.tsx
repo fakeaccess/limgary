@@ -98,16 +98,40 @@ export function CaseStudy() {
 
       {study.gallery.length > 0 && (
         <RevealOnScroll>
-          <div className="my-16 grid gap-6 sm:grid-cols-2">
-            {study.gallery.map((g, i) => (
-              <figure key={i}>
-                <CardArt art={study.cardArt} image={g.image} alt={g.caption} />
-                <figcaption className="mt-3 text-sm text-muted-foreground">
-                  {g.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          {study.gallery.some((g) => g.heading) ? (
+            <div className="my-16 flex flex-col gap-12">
+              {study.gallery.map((g, i) => (
+                <div
+                  key={i}
+                  className="grid gap-6 sm:grid-cols-[minmax(0,260px)_1fr] sm:items-start sm:gap-10"
+                >
+                  <CardArt art={study.cardArt} image={g.image} alt={g.heading ?? g.caption} />
+                  <div>
+                    <span className="inline-flex w-fit rounded-full border border-white/15 px-2.5 py-0.5 text-xs text-muted-foreground">
+                      Project #{i + 1}
+                    </span>
+                    <h3 className="mt-4 text-xl font-semibold tracking-tight sm:text-2xl">
+                      {g.heading}
+                    </h3>
+                    {g.description && (
+                      <p className="mt-3 text-muted-foreground">{g.description}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="my-16 grid gap-6 sm:grid-cols-2">
+              {study.gallery.map((g, i) => (
+                <figure key={i}>
+                  <CardArt art={study.cardArt} image={g.image} alt={g.caption} />
+                  <figcaption className="mt-3 text-sm text-muted-foreground">
+                    {g.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          )}
         </RevealOnScroll>
       )}
 

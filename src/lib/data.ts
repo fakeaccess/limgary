@@ -42,7 +42,7 @@ export type CaseStudy = {
   roleDetail: string[];
   impact: { intro: string; points: string[] };
   impactStats: Stat[];
-  gallery: { caption: string; image?: string }[];
+  gallery: { caption: string; image?: string; heading?: string; description?: string }[];
   behindClosedDoors: { heading: string; paragraphs: string[]; actions?: string[] };
   quote?: { text: string; attribution: string };
   learning: string[];
@@ -87,8 +87,20 @@ export const caseStudies: CaseStudy[] = [
       { label: "Products support with design system", value: "4" },
     ],
     gallery: [
-      { caption: "Project #1 — Multi-State Selection & Calculation Platform", image: "/images/case-studies/gallery/gaming-1.jpg" },
-      { caption: "Project #2 — Transaction History & Tracking" },
+      {
+        caption: "Project #1 — Multi-State Selection & Calculation Platform",
+        heading: "Multi-State Selection & Calculation Platform",
+        description:
+          "Led design for sophisticated selection and calculation platform managing complex user choices with real-time data integration and immediate financial impact. Developed systematic approach to multi-state flows (15+ possible states), real-time data updates, and robust error handling across transaction scenarios. Created cross-platform design patterns optimised for mobile, tablet, and desktop environments.",
+        image: "/images/case-studies/gallery/gaming-2.jpg",
+      },
+      {
+        caption: "Project #2 — Transaction History & Tracking",
+        heading: "Transaction History & Tracking",
+        description:
+          "Redesigned comprehensive transaction management system creating transparent user activity records and facilitating complex tracking workflows. Implemented hierarchical information architecture for multi-step actions, integrated real-time status updates, and developed intuitive historical data access patterns, enabling users to review past actions and celebrate their progress.",
+        image: "/images/case-studies/gallery/gaming-1.jpg",
+      },
     ],
     behindClosedDoors: {
       heading: "Behind Closed Doors: Uncharted Waters",
