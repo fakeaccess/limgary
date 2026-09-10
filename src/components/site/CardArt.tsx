@@ -10,6 +10,16 @@ const palettes: Record<CardArtType, { from: string; via: string; to: string; acc
   desktop: { from: "#0ea5e9", via: "#111827", to: "#0a0a0a", accent: "#7dd3fc" },
 };
 
+/** Per-project text-gradient classes for the case study intro paragraph — a subtle tint tied to each project's card art color. */
+export const cardArtTextGradient: Record<CardArtType, string> = {
+  gaming: "from-violet-300 to-indigo-300",
+  brands: "from-rose-300 to-fuchsia-200",
+  healthcare: "from-emerald-300 to-teal-200",
+  androidtv: "from-blue-300 to-sky-200",
+  system: "from-amber-300 to-yellow-200",
+  desktop: "from-sky-300 to-cyan-200",
+};
+
 const marks: Record<CardArtType, string> = {
   gaming: "M6 12h4M8 10v4M15 10.5h.01M17.5 13h.01",
   brands: "M8 8h3v3H8zM13 8h3v3h-3zM8 13h3v3H8zM13 13h3v3h-3z",

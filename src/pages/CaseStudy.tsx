@@ -4,8 +4,9 @@ import { ArrowLeft } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { CardArt } from "@/components/site/CardArt";
+import { CardArt, cardArtTextGradient } from "@/components/site/CardArt";
 import { RevealOnScroll } from "@/components/site/RevealOnScroll";
+import { cn } from "@/lib/utils";
 import { caseStudies } from "@/lib/data";
 
 export function CaseStudy() {
@@ -33,7 +34,14 @@ export function CaseStudy() {
           <CardArt art={study.cardArt} image={study.image} alt={study.title} />
         </div>
 
-        <p className="mt-8 text-lg">{study.intro}</p>
+        <p
+          className={cn(
+            "mt-8 bg-gradient-to-r bg-clip-text text-lg font-medium text-transparent",
+            cardArtTextGradient[study.cardArt]
+          )}
+        >
+          {study.intro}
+        </p>
 
         <div className="mt-10 grid grid-cols-3 gap-4 rounded-2xl border border-white/8 bg-white/[0.02] p-6 text-sm sm:p-8">
           <div>
