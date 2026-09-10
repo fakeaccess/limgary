@@ -30,7 +30,7 @@ export function CaseStudy() {
         <p className="mt-5 text-lg text-muted-foreground">{study.summary}</p>
 
         <div className="mt-8">
-          <CardArt art={study.cardArt} image={study.image} alt={study.title} className="aspect-[16/9]" />
+          <CardArt art={study.cardArt} image={study.image} alt={study.title} />
         </div>
 
         <p className="mt-8 text-lg">{study.intro}</p>

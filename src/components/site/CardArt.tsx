@@ -37,11 +37,11 @@ export function CardArt({
     return (
       <div
         className={cn(
-          "relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0c]",
+          "relative w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0c]",
           className
         )}
       >
-        <img src={image} alt={alt ?? ""} className="h-full w-full object-cover" loading="lazy" />
+        <img src={image} alt={alt ?? ""} className="block h-auto w-full" loading="lazy" />
       </div>
     );
   }
