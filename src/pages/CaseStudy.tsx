@@ -127,7 +127,7 @@ export function CaseStudy() {
               ))}
             </div>
           ) : (
-            <div className="my-16 grid gap-6 sm:grid-cols-2">
+            <div className="my-16 flex flex-col gap-10">
               {study.gallery.map((g, i) => (
                 <figure key={i}>
                   <CardArt art={study.cardArt} image={g.image} alt={g.caption} />
