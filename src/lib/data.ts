@@ -180,8 +180,7 @@ export const caseStudies: CaseStudy[] = [
       heading: "Behind Closed Doors: Leading Through Business Crisis",
       paragraphs: [
         "The Engineering team's significant investment in next-level traffic routing technology demanded immediate results, while competitors were capturing market share in identity management, private browsers, and mesh networking. As the company's first exploratory design initiative, we faced intense pressure to justify the investment and respond to competitive threats—but stakeholder opinions were creating paralysis when we needed speed.",
-      ],
-      actions: [
+        "What I did to drive change:",
         "I implemented systematic leadership under pressure: first principles thinking to cut through competitive panic and focus on real user needs across ExpressVPN, CyberGhost, and PIA; streamlined stakeholder management to eliminate opinion chaos; transparent communication to unblock progress; and action-oriented prototyping to validate strategic directions with real user feedback rather than internal opinion.",
       ],
     },
