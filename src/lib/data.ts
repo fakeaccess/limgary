@@ -53,8 +53,10 @@ export type CaseStudy = {
     frame?: "dark" | "white" | "none";
     /** Render at a capped, centered phone-screenshot width instead of stretching full-bleed — for a single portrait screenshot rather than a wide multi-panel graphic. */
     narrow?: boolean;
-    /** A set of looping GIFs/images shown together — 3-across on desktop, stacked on mobile. Overrides image/video when present. */
+    /** A set of looping GIFs/images shown together — side-by-side on desktop, stacked on mobile (unless `stacked` is set). Overrides image/video when present. */
     row?: { src: string; alt?: string; caption?: string }[];
+    /** Force a `row` to stack vertically at every breakpoint, including desktop, instead of the default side-by-side layout. */
+    stacked?: boolean;
   }[];
   behindClosedDoors: { heading: string; paragraphs: string[]; actions?: string[] };
   quote?: { text: string; attribution: string };
@@ -231,6 +233,7 @@ export const caseStudies: CaseStudy[] = [
       { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/healthcare-6.jpg" },
       {
         caption: "A series of concepts showcase.",
+        stacked: true,
         row: [
           { src: "/images/case-studies/gallery/healthcare-7.jpg", alt: "Check-out on the go" },
           { src: "/images/case-studies/gallery/healthcare-8.jpg", alt: "Wayfinder" },
@@ -242,6 +245,7 @@ export const caseStudies: CaseStudy[] = [
       paragraphs: [
         "The Cultural Resistance — Introducing Human-Centred Design to Healthcare felt like teaching jazz to a classical orchestra. Healthcare organisations operate on precision, protocols, and patient safety—concepts that seem to conflict with design thinking's iterative, ambiguous approach. Unclear outputs and design ambiguity made stakeholders uncomfortable—they expected detailed specifications, not exploratory prototypes.",
         "The Stakeholder Challenge — Multiple stakeholders with conflicting agendas made every decision complex. Clinical staff prioritised patient safety, administrators focused on efficiency, and executives needed merger success metrics. Meanwhile, healthcare red tape and privacy concerns created barriers to traditional UX research methods.",
+        "What I Did to Drive Change:",
       ],
       actions: [
         "Daily Transparency Built Trust — I hosted daily debriefs, sharing insights, learnings, and patient stories from research. This constant communication transformed scepticism into curiosity as stakeholders saw the human impact behind operational challenges.",

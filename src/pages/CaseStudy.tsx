@@ -134,7 +134,7 @@ export function CaseStudy() {
                     <div
                       className={cn(
                         "grid grid-cols-1 gap-4",
-                        g.row.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"
+                        !g.stacked && (g.row.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2")
                       )}
                     >
                       {g.row.map((item, j) => (
