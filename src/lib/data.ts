@@ -441,13 +441,13 @@ export const experience = [
 ];
 
 export const aboutStats: Stat[] = [
-  { label: "Years of design experience", value: "9+" },
+  { label: "Years of design experience", value: "10+" },
   { label: "Years in design management", value: "3" },
   { label: "Design projects delivered", value: "30+" },
 ];
 
 export const aboutContent = {
-  heading: "9 Years Driving Strategic And Product Design Transformation",
+  heading: "Driving Strategic And Product Design Transformation",
   paragraphs: [
     "Based in Singapore, I lead design strategy for complex organisational challenges—from billion-dollar multi-brand integrations to healthcare transformation initiatives. My foundation spans fashion and industrial design, providing a unique perspective on user interaction and creative problem-solving that enhances digital product strategy and drives innovative solutions.",
     "I combine strategic business thinking with comprehensive design expertise, having advised C-suite executives while managing global teams across multiple cultures and time zones. Experience across healthcare, privacy & security, and enterprise software—enhanced by cross-domain design thinking—enables rapid connection of systemic touchpoints and breakthrough approaches to organizational transformation.",
