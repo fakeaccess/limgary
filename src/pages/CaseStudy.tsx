@@ -149,9 +149,11 @@ export function CaseStudy() {
                 ) : (
                   <figure key={i} className={g.narrow ? "mx-auto max-w-sm" : undefined}>
                     <CardArt art={study.cardArt} image={g.image} alt={g.caption} frame={g.frame} />
-                    <figcaption className="mt-3 text-sm text-muted-foreground">
-                      {g.caption}
-                    </figcaption>
+                    {g.caption && (
+                      <figcaption className="mt-3 text-sm text-muted-foreground">
+                        {g.caption}
+                      </figcaption>
+                    )}
                   </figure>
                 )
               )}

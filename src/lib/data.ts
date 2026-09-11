@@ -166,7 +166,8 @@ export const caseStudies: CaseStudy[] = [
       { caption: "Design principles for each brand.", image: "/images/case-studies/gallery/brands-1.jpg" },
       { caption: "Future scenarios for each of the brands to highlight key hero moments.", image: "/images/case-studies/gallery/brands-2.jpg", frame: "none" },
       { caption: "Key job-to-be-done.", image: "/images/case-studies/gallery/brands-3.png", frame: "none" },
-      { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/brands-5.png", frame: "white" },
+      { caption: "", image: "/images/case-studies/gallery/brands-jtbd-panels.png", frame: "none" },
+      { caption: "", image: "/images/case-studies/gallery/brands-5.png", frame: "white" },
       {
         caption: "Snippets of concept prototypes.",
         row: [

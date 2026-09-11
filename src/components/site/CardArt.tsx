@@ -86,7 +86,7 @@ export function CardArt({
         <img
           src={image}
           alt={alt ?? ""}
-          className={cn("block w-full", crop && "aspect-[16/9] object-cover", className)}
+          className={cn("block w-full rounded-2xl", crop && "aspect-[16/9] object-cover", className)}
           loading="lazy"
         />
       );
