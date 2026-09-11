@@ -357,8 +357,8 @@ export const caseStudies: CaseStudy[] = [
     gallery: [
       { caption: "Component snapshot.", image: "/images/case-studies/gallery/system-1.jpg" },
       { caption: "Flow-first approach.", image: "/images/case-studies/gallery/system-2.jpg" },
-      { caption: "Embedded states in components.", image: "/images/case-studies/gallery/system-3.jpg" },
-      { caption: "Embedded complex animation in component.", image: "/images/case-studies/gallery/system-4.jpg" },
+      { caption: "Embedded states in components.", image: "/images/case-studies/gallery/system-3.gif" },
+      { caption: "Embedded complex animation in component.", image: "/images/case-studies/gallery/system-4.gif" },
       { caption: "Detailed documentation.", image: "/images/case-studies/gallery/system-5.jpg" },
       { caption: "Colour theming.", image: "/images/case-studies/gallery/system-6.jpg" },
     ],
@@ -412,8 +412,8 @@ export const caseStudies: CaseStudy[] = [
       { caption: "Before — Multi windows layout.", image: "/images/case-studies/gallery/desktop-1.jpg" },
       { caption: "After — Single window layout.", image: "/images/case-studies/gallery/desktop-2.jpg" },
       { caption: "Desktop application benchmarking.", image: "/images/case-studies/gallery/desktop-3.jpg" },
-      { caption: "Prototype demo.", image: "/images/case-studies/gallery/desktop-4.jpg" },
-      { caption: "Specification document of the new layout." },
+      { caption: "Prototype demo.", video: "/images/case-studies/gallery/desktop-4.mp4" },
+      { caption: "Specification document of the new layout.", image: "/images/case-studies/gallery/desktop-5.jpg" },
     ],
     behindClosedDoors: {
       heading: "Behind Closed Doors: Navigating Stakeholder Resistance",
