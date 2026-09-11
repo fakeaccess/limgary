@@ -54,7 +54,7 @@ export type CaseStudy = {
     /** Render at a capped, centered phone-screenshot width instead of stretching full-bleed — for a single portrait screenshot rather than a wide multi-panel graphic. */
     narrow?: boolean;
     /** A set of looping GIFs/images shown together — 3-across on desktop, stacked on mobile. Overrides image/video when present. */
-    row?: { src: string; alt?: string }[];
+    row?: { src: string; alt?: string; caption?: string }[];
   }[];
   behindClosedDoors: { heading: string; paragraphs: string[]; actions?: string[] };
   quote?: { text: string; attribution: string };
@@ -218,13 +218,24 @@ export const caseStudies: CaseStudy[] = [
       { label: "Reduction in call drop rate, improving care accessibility", value: "20%" },
     ],
     gallery: [
-      { caption: "A patient's personal calendar to keep track of her various appointments.", image: "/images/case-studies/gallery/healthcare-1.jpg" },
-      { caption: "A patient zooming in on the medication details to get a clearer view.", image: "/images/case-studies/gallery/healthcare-2.jpg" },
+      {
+        caption: "",
+        row: [
+          { src: "/images/case-studies/gallery/healthcare-1.jpg", alt: "A patient's personal calendar to keep track of her various appointments.", caption: "A patient's personal calendar to keep track of her various appointments." },
+          { src: "/images/case-studies/gallery/healthcare-2.jpg", alt: "A patient zooming in on the medication details to get a clearer view.", caption: "A patient zooming in on the medication details to get a clearer view." },
+        ],
+      },
       { caption: "Snapshot of challenges.", image: "/images/case-studies/gallery/healthcare-3.jpg" },
       { caption: "Ethnographic research summary.", image: "/images/case-studies/gallery/healthcare-4.jpg" },
       { caption: "Exemplars from various ecosystems.", image: "/images/case-studies/gallery/healthcare-5.jpg" },
       { caption: "High-level strategy to transform patient experience.", image: "/images/case-studies/gallery/healthcare-6.jpg" },
-      { caption: "A series of concepts showcase.", image: "/images/case-studies/gallery/healthcare-7.jpg" },
+      {
+        caption: "A series of concepts showcase.",
+        row: [
+          { src: "/images/case-studies/gallery/healthcare-7.jpg", alt: "Check-out on the go" },
+          { src: "/images/case-studies/gallery/healthcare-8.jpg", alt: "Wayfinder" },
+        ],
+      },
     ],
     behindClosedDoors: {
       heading: "Behind Closed Doors: Introducing Human-Centred Design to Healthcare",

@@ -131,20 +131,33 @@ export function CaseStudy() {
               {study.gallery.map((g, i) =>
                 g.row ? (
                   <figure key={i}>
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                    <div
+                      className={cn(
+                        "grid grid-cols-1 gap-4",
+                        g.row.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"
+                      )}
+                    >
                       {g.row.map((item, j) => (
-                        <img
-                          key={j}
-                          src={item.src}
-                          alt={item.alt ?? g.caption}
-                          className="block w-full rounded-2xl"
-                          loading="lazy"
-                        />
+                        <div key={j}>
+                          <img
+                            src={item.src}
+                            alt={item.alt ?? g.caption}
+                            className="block w-full rounded-2xl"
+                            loading="lazy"
+                          />
+                          {item.caption && (
+                            <figcaption className="mt-3 text-sm text-muted-foreground">
+                              {item.caption}
+                            </figcaption>
+                          )}
+                        </div>
                       ))}
                     </div>
-                    <figcaption className="mt-3 text-sm text-muted-foreground">
-                      {g.caption}
-                    </figcaption>
+                    {g.caption && !g.row.some((item) => item.caption) && (
+                      <figcaption className="mt-3 text-sm text-muted-foreground">
+                        {g.caption}
+                      </figcaption>
+                    )}
                   </figure>
                 ) : (
                   <figure key={i} className={g.narrow ? "mx-auto max-w-sm" : undefined}>
