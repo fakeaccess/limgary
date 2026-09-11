@@ -302,6 +302,7 @@ export const caseStudies: CaseStudy[] = [
       heading: "Behind Closed Doors: Navigating Constraints & Driving Change",
       paragraphs: [
         "The AndroidTV platform was a significant source of user frustration, but had no dedicated owner and hadn't been prioritised since 2018. Key stakeholders, while supportive, were hesitant to adopt new work that fell outside their planned OKRs, creating organisational inertia.",
+        "What I did to drive change:",
       ],
       actions: [
         "Built a Coalition for Change — Recognising the lack of formal ownership, I took the initiative to build a case for improvement. I partnered with the Customer Support and Voice of the Customer (VotC) teams to gather qualitative data and validate user frustrations.",
@@ -366,6 +367,7 @@ export const caseStudies: CaseStudy[] = [
       paragraphs: [
         "This was genuinely first-of-its-kind territory. No one in the company had attempted design system consolidation across three distinct brands and four platforms simultaneously. We were writing the methodology while executing it, with the entire organisation watching.",
         "The pressure was immense, but the uncertainty was the real challenge. While leadership debated high-level strategies and pivoted approaches in real-time, I realised that waiting for perfect clarity would mean never starting.",
+        "What I did to drive change:",
       ],
       actions: [
         "Bias towards action — when faced with questions no one could answer theoretically, I built answers practically. I researched and experimented with the best ways to develop and document a component, and tested it with designers and developers.",
@@ -417,6 +419,7 @@ export const caseStudies: CaseStudy[] = [
       heading: "Behind Closed Doors: Navigating Stakeholder Resistance",
       paragraphs: [
         "Proposing a major desktop redesign at ExpressVPN meant overcoming significant organisational resistance. The Product Manager wanted minimal risk, while engineering teams worried about user familiarity with existing multi-window patterns.",
+        "What I did to drive change:",
       ],
       actions: [
         "Instead of design arguments, I built compelling evidence: industry benchmarking of best-in-class applications, platform guidelines from Apple and Microsoft, and user testing with 30 existing customers. When 80% of users preferred the new single-window design, stakeholder conversations shifted from \"why change?\" to \"how do we implement this well?\"",
