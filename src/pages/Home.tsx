@@ -46,7 +46,7 @@ export function Home() {
             return (
               <div
                 key={study.slug}
-                className="mx-auto w-full rounded-3xl md:sticky md:w-[var(--stack-w)] md:bg-background"
+                className="sticky mx-auto w-[var(--stack-w)] rounded-3xl bg-background"
                 style={{
                   top: `${88 + i * 16}px`,
                   zIndex: i + 1,

@@ -16,7 +16,7 @@ export const cardArtTextGradient: Record<CardArtType, string> = {
   brands: "from-rose-300 to-fuchsia-200",
   healthcare: "from-emerald-300 to-teal-200",
   androidtv: "from-blue-300 to-sky-200",
-  system: "from-amber-300 to-yellow-200",
+  system: "from-green-300 to-lime-200",
   desktop: "from-sky-300 to-cyan-200",
 };
 
