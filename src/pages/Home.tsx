@@ -2,8 +2,8 @@ import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { LogoMarquee } from "@/components/site/LogoMarquee";
-import { CaseStudyCard } from "@/components/site/CaseStudyCard";
 import { RevealOnScroll } from "@/components/site/RevealOnScroll";
+import { StackedCaseStudies } from "@/components/site/StackedCaseStudies";
 import { caseStudies, experience, heroAvatar, heroAvatarWebp, siteMeta } from "@/lib/data";
 
 export function Home() {
@@ -45,26 +45,7 @@ export function Home() {
       <LogoMarquee />
 
       <section id="work" className="container scroll-mt-20 py-24 sm:py-32">
-        <div className="flex flex-col gap-10">
-          {caseStudies.map((study, i) => {
-            const stackWidth = 100 - (caseStudies.length - 1 - i) * 2.5;
-            return (
-              <div
-                key={study.slug}
-                className="sticky mx-auto w-[var(--stack-w)] rounded-3xl bg-background"
-                style={{
-                  top: `${88 + i * 16}px`,
-                  zIndex: i + 1,
-                  ["--stack-w" as string]: `${stackWidth}%`,
-                }}
-              >
-                <RevealOnScroll>
-                  <CaseStudyCard study={study} reverse={i % 2 === 1} />
-                </RevealOnScroll>
-              </div>
-            );
-          })}
-        </div>
+        <StackedCaseStudies caseStudies={caseStudies} />
       </section>
 
       <section id="experience" className="border-t border-white/5">
