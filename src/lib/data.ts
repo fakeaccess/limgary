@@ -8,11 +8,13 @@ export const siteMeta = {
 };
 
 export const heroAvatar = "/images/hero-avatar.png";
+/** WebP companion used for the on-page hero image; `heroAvatar` (PNG) stays as-is for the favicon and OG/Twitter previews. */
+export const heroAvatarWebp = "/images/hero-avatar-hero.webp";
 
 export const logos = [
   { name: "IBM", blurb: "Technology and consulting for global businesses.", logo: "/images/logos/ibm.svg", width: 1075, height: 401 },
   { name: "Boston Consulting Group", blurb: "One of the world's top three strategy consulting firms.", logo: "/images/logos/bcg.svg", width: 1024, height: 432 },
-  { name: "KONE", blurb: "Global leader in elevators and escalators.", logo: "/images/logos/kone.png", logoIsWhite: true, width: 1549, height: 598 },
+  { name: "KONE", blurb: "Global leader in elevators and escalators.", logo: "/images/logos/kone.png", logoIsWhite: true, width: 400, height: 154 },
   { name: "ExpressVPN", blurb: "A top-tier consumer virtual private network.", logo: "/images/logos/expressvpn.svg", width: 261, height: 50 },
   { name: "Nanyang Polytechnic", blurb: "A leading institution for design education in Singapore.", logo: "/images/logos/nyp.svg", width: 300, height: 63 },
   { name: "Chaos Theory", blurb: "A venture studio building digital products.", logo: "/images/logos/chaos-theory.svg", width: 1173, height: 163 },
@@ -33,6 +35,8 @@ export type CaseStudy = {
   summary: string;
   cardArt: CardArt;
   image: string;
+  /** WebP companion to `image` — same picture, smaller file; `image` stays the fallback (and the one used for OG/Twitter previews, which need a widely-supported format). */
+  imageWebp: string;
   cardStats: Stat[];
   role: string;
   year: string;
@@ -71,6 +75,7 @@ export const caseStudies: CaseStudy[] = [
       "A series of narratives detailing the redesign of the platform, establishing the design operations, and launching new features.",
     cardArt: "gaming" as const,
     image: "/images/case-studies/gaming.jpg",
+    imageWebp: "/images/case-studies/gaming.webp",
     cardStats: [
       { label: "Monthly turnover", value: "$XXM+" },
       { label: "Unified Design System", value: "4" },
@@ -140,6 +145,7 @@ export const caseStudies: CaseStudy[] = [
       "Leading design strategy for three major VPN brands to maintain competitive distinctiveness while enabling operational efficiency",
     cardArt: "brands" as const,
     image: "/images/case-studies/brands.jpg",
+    imageWebp: "/images/case-studies/brands.webp",
     cardStats: [
       { label: "Brands differentiated", value: "3" },
       { label: "Global team members", value: "20+" },
@@ -197,6 +203,7 @@ export const caseStudies: CaseStudy[] = [
     summary: "A strategic design approach to improving patient care across 3 hospitals and 6 polyclinics.",
     cardArt: "healthcare" as const,
     image: "/images/case-studies/healthcare.jpg",
+    imageWebp: "/images/case-studies/healthcare.webp",
     cardStats: [
       { label: "First call resolution", value: "+20%" },
       { label: "Staff productivity", value: "+25%" },
@@ -265,6 +272,7 @@ export const caseStudies: CaseStudy[] = [
     summary: "Redesigning the ExpressVPN sign-up experience to reduce user friction and drive business growth.",
     cardArt: "androidtv" as const,
     image: "/images/case-studies/androidtv.jpg",
+    imageWebp: "/images/case-studies/androidtv.webp",
     cardStats: [
       { label: "Sign-up rate", value: "+2%" },
       { label: "Annual revenue", value: "$20K" },
@@ -323,6 +331,7 @@ export const caseStudies: CaseStudy[] = [
       "A bold cross-team initiative to reduce design/tech debt, accelerating team velocity and improving accessibility standards",
     cardArt: "system" as const,
     image: "/images/case-studies/system.jpg",
+    imageWebp: "/images/case-studies/system.webp",
     cardStats: [
       { label: "Brands differentiated", value: "3" },
       { label: "Global team members", value: "20+" },
@@ -385,6 +394,7 @@ export const caseStudies: CaseStudy[] = [
       "A strategic design approach to transform ExpressVPN's desktop application for improved usability and competitive positioning",
     cardArt: "desktop" as const,
     image: "/images/case-studies/desktop.jpg",
+    imageWebp: "/images/case-studies/desktop.webp",
     cardStats: [
       { label: "User preference", value: "80%" },
       { label: "Feature discoverability", value: "60%" },

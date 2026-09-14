@@ -32,6 +32,7 @@ const marks: Record<CardArtType, string> = {
 export function CardArt({
   art,
   image,
+  imageWebp,
   video,
   videoWebm,
   alt,
@@ -41,6 +42,8 @@ export function CardArt({
 }: {
   art: CardArtType;
   image?: string;
+  /** Optional WebP source, offered before the `image` fallback for smaller file size (same technique as videoWebm below). */
+  imageWebp?: string;
   /** Looping video (mp4/h264) shown instead of a static image — e.g. an export of an interactive prototype. */
   video?: string;
   /** Optional webm/vp9 source, offered before the mp4 fallback for smaller size and broader headless/Linux support. */
@@ -81,15 +84,15 @@ export function CardArt({
   }
 
   if (image) {
+    const img = (imgClassName: string) => (
+      <picture>
+        {imageWebp && <source srcSet={imageWebp} type="image/webp" />}
+        <img src={image} alt={alt ?? ""} className={imgClassName} loading="lazy" />
+      </picture>
+    );
+
     if (frame === "none") {
-      return (
-        <img
-          src={image}
-          alt={alt ?? ""}
-          className={cn("block w-full rounded-2xl", crop && "aspect-[16/9] object-cover", className)}
-          loading="lazy"
-        />
-      );
+      return img(cn("block w-full rounded-2xl", crop && "aspect-[16/9] object-cover", className));
     }
 
     return (
@@ -101,12 +104,7 @@ export function CardArt({
           className
         )}
       >
-        <img
-          src={image}
-          alt={alt ?? ""}
-          className={cn("block w-full", crop ? "h-full object-cover" : "h-auto")}
-          loading="lazy"
-        />
+        {img(cn("block w-full", crop ? "h-full object-cover" : "h-auto"))}
       </div>
     );
   }

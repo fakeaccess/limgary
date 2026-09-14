@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { LogoMarquee } from "@/components/site/LogoMarquee";
 import { CaseStudyCard } from "@/components/site/CaseStudyCard";
 import { RevealOnScroll } from "@/components/site/RevealOnScroll";
-import { caseStudies, experience, heroAvatar, siteMeta } from "@/lib/data";
+import { caseStudies, experience, heroAvatar, heroAvatarWebp, siteMeta } from "@/lib/data";
 
 export function Home() {
   return (
@@ -15,12 +15,17 @@ export function Home() {
           aria-hidden="true"
         />
         <div className="container flex flex-col items-center">
-          <img
-            src={heroAvatar}
-            alt={siteMeta.name}
-            className="size-24 rounded-full border border-white/10 object-cover"
-            loading="eager"
-          />
+          <picture>
+            <source srcSet={heroAvatarWebp} type="image/webp" />
+            <img
+              src={heroAvatar}
+              alt={siteMeta.name}
+              width={480}
+              height={480}
+              className="size-24 rounded-full border border-white/10 object-cover"
+              loading="eager"
+            />
+          </picture>
           <h1 className="mt-8 text-balance text-4xl font-semibold tracking-tight sm:text-6xl">
             Chaos to Clarity
           </h1>
