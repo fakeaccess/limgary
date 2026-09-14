@@ -84,4 +84,14 @@ await writePage("about", {
   image: `${siteUrl}/images/hero-avatar.png`,
 });
 
-console.log(`generate-meta-pages: wrote ${caseStudies.length} case study page(s) + about`);
+// sitemap.xml — kept in sync automatically since it's generated from the same
+// case-study list as the meta pages above, rather than hand-maintained.
+const urls = [siteUrl + "/", `${siteUrl}/about`, ...caseStudies.map((cs) => `${siteUrl}/case-studies/${cs.slug}`)];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
+</urlset>
+`;
+await writeFile(path.join(dist, "sitemap.xml"), sitemap, "utf8");
+
+console.log(`generate-meta-pages: wrote ${caseStudies.length} case study page(s) + about + sitemap.xml`);

@@ -11,6 +11,8 @@ export function LogoMarquee() {
             <img
               src={logo.logo}
               alt={logo.name}
+              width={logo.width}
+              height={logo.height}
               className={cn(
                 "h-7 w-auto max-w-[10rem] object-contain opacity-60 transition-opacity duration-200 hover:opacity-100",
                 !logo.logoIsWhite && "brightness-0 invert"

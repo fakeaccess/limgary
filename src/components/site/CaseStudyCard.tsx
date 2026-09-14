@@ -9,9 +9,9 @@ export function CaseStudyCard({ study, reverse }: { study: CaseStudy; reverse?: 
   return (
     <div className="group grid gap-8 rounded-3xl border border-white/8 bg-white/[0.02] p-6 transition-colors hover:border-white/15 sm:p-10 md:grid-cols-2 md:items-center md:gap-12">
       <div className={reverse ? "md:order-2" : ""}>
-        <h3 className="text-balance text-2xl font-semibold tracking-tight sm:text-3xl">
+        <h2 className="text-balance text-2xl font-semibold tracking-tight sm:text-3xl">
           {study.title}
-        </h3>
+        </h2>
         <p className="mt-4 text-muted-foreground">{study.summary}</p>
 
         <Button asChild variant="outline" className="mt-8">
